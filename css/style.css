@@ -6,6 +6,7 @@
     --main-padding-top: 100px;
     --main-padding-bottom: 100px;
     --section-background: #ececec;
+    --paragraph-color: #777;
 }
 
 /* End Variable */
@@ -61,9 +62,13 @@ ul {
 }
 
 /* End Global Rules */
+/* Start Header */
 header {
     background-color: white;
     position: relative;
+    -webkit-box-shadow: 0 0 10px #ddd;
+    -moz-box-shadow: 0 0 10px #ddd;
+    box-shadow: 0 0 10px #ddd;
 }
 
 header .container {
@@ -126,7 +131,7 @@ header .container .main-nav>li>a {
 
 header .container .main-nav>li>a:hover {
     color: var(--main-color);
-    background-color: white;
+    background-color: #fafafa;
 }
 
 header .container .main-nav>li>a::before {
@@ -143,3 +148,134 @@ header .container .main-nav>li>a::before {
 header .container .main-nav>li>a:hover::before {
     left: 0;
 }
+
+/* End Header */
+/* Start Landing  */
+.landing {
+    position: relative;
+}
+
+.landing::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -40px;
+    width: 100%;
+    height: 100%;
+    background-color: #ececec;
+    z-index: -1;
+    transform: skewY(-6deg);
+    transform-origin: top left;
+}
+
+.landing .container {
+    min-height: calc(100vh - 72px);
+    display: flex;
+    align-items: center;
+    padding-bottom: 120px;
+}
+
+.landing .text {
+    flex: 1;
+}
+
+@media (max-width: 991px) {
+    .landing .text {
+        text-align: center;
+    }
+}
+
+.landing .text h1 {
+    font-size: 40px;
+    margin: 0;
+    letter-spacing: -2px;
+}
+
+.landing .text p {
+    font-size: 23px;
+    line-height: 1.7;
+    margin: 5px 0 0;
+    color: #666;
+    max-width: 500px;
+}
+
+@media (max-width: 991px) {
+    .landing .text p {
+        margin: 10px auto;
+    }
+}
+
+.landing .container img {
+    position: relative;
+    width: 600px;
+    animation: up-and-down 5s linear infinite;
+}
+
+@media (max-width: 991px) {
+    .landing .container .image {
+        display: none;
+    }
+}
+
+@keyframes up-and-down {
+    0% {
+        top: 0;
+    }
+
+    50% {
+        top: -50px;
+    }
+
+    100% {
+        top: 0;
+    }
+}
+
+.landing .go-down {
+    color: var(--main-color);
+    position: absolute;
+    left: 50%;
+    transform: translateY(-50%);
+    bottom: 30px;
+    transition: var(--main-transition);
+}
+
+.landing .go-down i {
+    animation: bouncing 1.5s infinite;
+}
+
+@keyframes bouncing {
+    0% {
+        transform: translateY(0);
+    }
+
+    10% {
+        transform: translateY(0);
+    }
+
+    20% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-15px);
+    }
+
+    50% {
+        transform: translateY(0);
+    }
+
+    60% {
+        transform: translateY(-15px);
+    }
+
+    80% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* End Landing */
