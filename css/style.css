@@ -580,27 +580,19 @@ header .mega-menu .links li a i {
 }
 
 .gallery .box .image:hover::before {
-    animation: flashing 0.4s ;
+    animation: flashing 0.4s;
 }
 
 @keyframes flashing {
-    0% {
-        width: 20%;
-        height: 20%;
-        opacity: 1;
-    }
 
-
-
-    70% {
-        width: 100%;
-        height: 100%;
+    0%,
+    40% {
         opacity: 1;
     }
 
     100% {
-        width: 100%;
-        height: 100%;
+        width: 200%;
+        height: 200%;
         opacity: 0;
     }
 }
@@ -613,4 +605,7 @@ header .mega-menu .links li a i {
 .gallery .box .image:hover img {
     transform: rotate(5deg) scale(1.1);
 }
+
 /* End Gallery */
+/* Start Features */
+/* End Features */
