@@ -749,3 +749,56 @@ header .mega-menu .links li a i {
 }
 
 /* End Features */
+/* Start Testimonials */
+.testimonials {
+    padding-top: var(--main-padding-top);
+    padding-bottom: var(--main-padding-bottom);
+    position: relative;
+    background-color: var(--section-background);
+}
+
+.testimonials .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(300px , 1fr) );
+    gap: 40px;
+}
+
+.testimonials .box {
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 7%);
+    border-radius: 6px;
+    position: relative;
+}
+
+.testimonials .box img {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    right: -10px;
+    top: -50px;
+    border-radius: 50%;
+    border: 10px solid var(--section-background);
+}
+
+.testimonials .box h3 {
+    margin: 0 0 10px;
+}
+
+.testimonials .box span {
+    color: var(--paragraph-color);
+    margin-bottom: 10px;
+    display: block;
+}
+
+.testimonials .box .rate i {
+    color: #ffc107;
+}
+
+.testimonials .box {
+    line-height: 1.5;
+    margin-top: 10px;
+    margin-bottom: 0;
+    color: var(--paragraph-color);
+}
+/* End Testimonials */
